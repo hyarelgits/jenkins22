@@ -1,4 +1,3 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/kiranhls1.jar kiranhls1.jar
-ENTRYPOINT ["java", "-jar", "/kiranhls1jarj
+FROM tomcat:8
+COPY target/*.war /usr/local/tomcat/webapps
+
