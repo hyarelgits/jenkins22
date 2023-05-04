@@ -1,8 +1,6 @@
-FROM dockerfile/java:oracle-java8
-VOLUME /tmp
-ADD kiranhls1.jar /opt/kiranhls/
+FROM openjdk:8
 EXPOSE 8080
-WORKDIR /opt/kiranhls/
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-Xmx1g", "-jar", "kiranhls1.jar"]
+ADD target/kiranhls.jar kiranhls.jar
+ENTRYPOINT ["java", "-jar", "/kiranhls.jar"]
 
 
