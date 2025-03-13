@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <zip destfile="/var/lib/jenkins/workspace/jenkins22/target/app.zip">
+    <zipfileset dir="/var/lib/jenkins/workspace/jenkins22/target/docker"/>
+    <zipfileset includes="kiranhls1.jar" dir="/var/lib/jenkins/workspace/jenkins22/target"/>
+  </zip>
+</target>
+</project>
